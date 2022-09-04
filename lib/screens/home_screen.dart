@@ -34,19 +34,43 @@ class _HomeScreenState extends State<HomeScreen> {
         itemCount: bands.length,
           itemBuilder: (BuildContext context, int index) {
             return Container(
+              //color: Colors.transparent,
               padding: const EdgeInsets.only(left: 10, right: 10, top: 10),
-              child: Card(
-                elevation: 10,
-                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
-                child: ListTile(
-                  leading: CircleAvatar(
-                    child: Text(bands[index].name.substring(0,2), style: const TextStyle(color: Colors.amber)),
-                    backgroundColor: Colors.amber[100],
+              child: Dismissible(
+                key: Key(bands[index].id),
+                direction: DismissDirection.startToEnd,
+                background: Card(
+                  elevation: 10,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(20)
                   ),
-                  title: Text(bands[index].name, style: const TextStyle(fontSize: 25),),
-                  trailing: Text('${bands[index].votes}', style: const TextStyle(fontSize: 20)),
-                  onTap: (){
-                  },
+                  color: Colors.red,
+                  child: Padding(
+                    padding: const EdgeInsets.only(left: 30),
+                    child: Align(
+                        alignment: Alignment.centerLeft,
+                        child: Text('Delete', style: TextStyle(color: Colors.white, fontSize: 20))
+                    ),
+                  ),
+                ),
+                onDismissed: (DismissDirection direction) {
+                  setState(() {
+                    bands.removeAt(index);
+                  });
+                },
+                child: Card(
+                  elevation: 10,
+                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+                  child: ListTile(
+                    leading: CircleAvatar(
+                      child: Text(bands[index].name.substring(0,2), style: const TextStyle(color: Colors.amber)),
+                      backgroundColor: Colors.amber[100],
+                    ),
+                    title: Text(bands[index].name, style: const TextStyle(fontSize: 25),),
+                    trailing: Text('${bands[index].votes}', style: const TextStyle(fontSize: 20)),
+                    onTap: (){
+                    },
+                  ),
                 ),
               ),
             );
