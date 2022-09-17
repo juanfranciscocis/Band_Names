@@ -13,7 +13,12 @@ class StatusScreen extends StatelessWidget{
 
     return Scaffold(
       body: Center(
-        child: Text('StatusScreen'),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text('${socketService.serverStatus}')
+          ],
+        ),
       ),
     );
   }
