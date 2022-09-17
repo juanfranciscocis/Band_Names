@@ -1,11 +1,27 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 import 'package:band_names/screens/screens.dart';
+import 'package:band_names/services/services.dart';
+
 
 
 void main(){
-  runApp(const MyApp());
+  WidgetsFlutterBinding.ensureInitialized();
+  runApp(const AppState());
 }
+
+class AppState extends StatelessWidget{
+  const AppState({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return MultiProvider(providers:[
+      ChangeNotifierProvider(create: (_) => new SocketService()),
+    ], child: const MyApp());
+  }
+}
+
 
 class MyApp extends StatelessWidget{
   //CONSTRUCTOR
