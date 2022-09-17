@@ -16,7 +16,14 @@ class StatusScreen extends StatelessWidget{
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text('${socketService.serverStatus}')
+            Text('${socketService.serverStatus}'),
+            SizedBox(height: 20,),
+            FloatingActionButton(onPressed: (){
+              //Tarea emitir
+              socketService.socket.emit('newMessage',{'name': 'Juan Francisco Cisneros', 'message': 'envio un mensaje a todos'});
+            },
+            child: Icon(Icons.message),
+            ),
           ],
         ),
       ),
