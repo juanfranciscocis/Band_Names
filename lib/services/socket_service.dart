@@ -42,6 +42,15 @@ class SocketService with ChangeNotifier{
       this._serverStatus = ServerStatus.Offline; // Cambiar el estado de la conexión
       notifyListeners();
     });
+
+    socket.on('newMessage',(payload){
+      print('newMessage:');
+      print('name: ${payload['name']}');
+      print('message: ${payload['message']}');
+      notifyListeners();
+    });
+
+
   }
 
 
