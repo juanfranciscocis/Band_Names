@@ -47,12 +47,9 @@ class SocketService with ChangeNotifier{
       notifyListeners();
     });
 
-/*     this._socket!.on('newMessage',(payload){
-      print('newMessage:');
-      print('name: ${payload['name']}');
-      print('message: ${payload['message']}');
-      notifyListeners();
-    });*/
+
+
+
 
 
   }
