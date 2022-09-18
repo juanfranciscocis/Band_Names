@@ -33,7 +33,7 @@ class MyApp extends StatelessWidget{
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Band Names',
-      initialRoute: '/status',
+      initialRoute: '/home',
       routes: {
         '/home': (BuildContext context) => const HomeScreen(),
         '/status': (BuildContext context) => const StatusScreen(),

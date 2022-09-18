@@ -20,7 +20,7 @@ class StatusScreen extends StatelessWidget{
             SizedBox(height: 20,),
             FloatingActionButton(onPressed: (){
               //Tarea emitir
-              socketService.socket.emit('newMessage',{'name': 'Juan Francisco Cisneros', 'message': 'envio un mensaje a todos'});
+              socketService.emit('newMessage',{'name': 'Juan Francisco Cisneros', 'message': 'envio un mensaje a todos'});
             },
             child: Icon(Icons.message),
             ),

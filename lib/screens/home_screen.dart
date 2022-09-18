@@ -2,8 +2,10 @@ import 'dart:io';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 import '../models/models.dart';
+import '../services/socket_service.dart';
 
 class HomeScreen extends StatefulWidget{
   const HomeScreen({Key? key}) : super(key: key);
@@ -23,12 +25,21 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
+
+    final socketService = Provider.of<SocketService>(context);
+
     return Scaffold(
       backgroundColor: Colors.grey[200],
       appBar: AppBar(
         title: const Text('Band Names', style: TextStyle(color: Colors.black87)),
         backgroundColor: Colors.white,
         elevation: 5,
+        actions: [
+          Container(
+            margin: const EdgeInsets.only(right: 20),
+            child : (socketService.serverStatus == ServerStatus.Online ) ? Icon(Icons.check_circle, color: Colors.green, size: 35,) : Icon(Icons.offline_bolt_rounded, color: Colors.redAccent, size: 35,),
+          )
+        ],
       ),
       body: ListView.builder(
         itemCount: bands.length,
