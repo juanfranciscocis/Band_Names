@@ -34,6 +34,7 @@ class MyApp extends StatelessWidget{
       debugShowCheckedModeBanner: false,
       title: 'Band Names',
       initialRoute: '/home',
+      theme: ThemeData.dark().copyWith(),
       routes: {
         '/home': (BuildContext context) => const HomeScreen(),
         '/status': (BuildContext context) => const StatusScreen(),

@@ -28,12 +28,9 @@ class _HomeScreenState extends State<HomeScreen> {
   void initState() {
     final socketService = Provider.of<SocketService>(context, listen: false);
     socketService.socket.on('active-bands', (payload){
-
       this.bands = (payload as List).map((band) => Band.fromMap(band)).toList();
       setState(() {
       });
-
-
     });
     super.initState();
   }
@@ -52,10 +49,10 @@ class _HomeScreenState extends State<HomeScreen> {
     final socketService = Provider.of<SocketService>(context);
 
     return Scaffold(
-      backgroundColor: Colors.grey[200],
+      //backgroundColor: Colors.grey[200],
       appBar: AppBar(
-        title: const Text('Band Names', style: TextStyle(color: Colors.black87)),
-        backgroundColor: Colors.white,
+        title: const Text('Band Names', style: TextStyle(color: Colors.white)),
+        //backgroundColor: Colors.white,
         elevation: 5,
         actions: [
           Container(
