@@ -172,6 +172,7 @@ class _HomeScreenState extends State<HomeScreen> {
             child: const Text('New Band Name'),
           ),
           content: CupertinoTextField(
+            style: const TextStyle(color: Colors.amber),
             controller: textController,
             onChanged: (value) {},
           ),
