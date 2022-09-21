@@ -36,7 +36,7 @@ class SocketService with ChangeNotifier{
     });
 
      this._socket!.onConnect((_) {
-      print('connect');
+      print('connected');
       this._serverStatus = ServerStatus.Online; // Cambiar el estado de la conexión
       notifyListeners();
     });

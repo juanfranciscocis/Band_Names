@@ -103,6 +103,8 @@ class _HomeScreenState extends State<HomeScreen> {
                     title: Text(bands[index].name, style: const TextStyle(fontSize: 25),),
                     trailing: Text('${bands[index].votes}', style: const TextStyle(fontSize: 20)),
                     onTap: (){
+                      socketService.socket.emit('vote-band', {'id': bands[index].id});
+                      print('VOTED ${bands[index].id}');
                     },
                   ),
                 ),
