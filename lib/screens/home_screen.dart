@@ -2,6 +2,7 @@ import 'dart:io';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:pie_chart/pie_chart.dart';
 import 'package:provider/provider.dart';
 
 import '../models/models.dart';
@@ -61,56 +62,72 @@ class _HomeScreenState extends State<HomeScreen> {
           )
         ],
       ),
-      body: ListView.builder(
-        itemCount: bands.length,
-          itemBuilder: (BuildContext context, int index) {
-            return Container(
-              //color: Colors.transparent,
-              padding: const EdgeInsets.only(left: 10, right: 10, top: 10),
-              child: Dismissible(
-                key: Key(bands[index].id),
-                direction: DismissDirection.startToEnd,
-                background: Card(
-                  elevation: 10,
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(20)
-                  ),
-                  color: Colors.red,
-                  child: Padding(
-                    padding: const EdgeInsets.only(left: 30),
-                    child: Align(
-                        alignment: Alignment.centerLeft,
-                        child: Text('Delete', style: TextStyle(color: Colors.white, fontSize: 20))
-                    ),
-                  ),
-                ),
-                onDismissed: (DismissDirection direction) {
-                  setState(() {
-                    socketService.socket.emit('delete-band', {'id': bands[index].id});
-                    bands.removeAt(index);
-                  });
+      body: Column(
+        children: [
 
-                },
-                child: Card(
-                  elevation: 10,
-                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
-                  child: ListTile(
-                    leading: CircleAvatar(
-                      child: Text(bands[index].name.substring(0,2), style: const TextStyle(color: Colors.amber)),
-                      backgroundColor: Colors.amber[100],
+          SizedBox(height: 20,),
+
+          Padding(
+            padding: const EdgeInsets.all(10),
+            child: _showGraph(),
+          ),
+
+          SizedBox(height: 20,),
+
+          Expanded(
+            child: ListView.builder(
+              itemCount: bands.length,
+                itemBuilder: (BuildContext context, int index) {
+                  return Container(
+                    //color: Colors.transparent,
+                    padding: const EdgeInsets.only(left: 10, right: 10, top: 10),
+                    child: Dismissible(
+                      key: Key(bands[index].id),
+                      direction: DismissDirection.startToEnd,
+                      background: Card(
+                        elevation: 10,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(20)
+                        ),
+                        color: Colors.red,
+                        child: Padding(
+                          padding: const EdgeInsets.only(left: 30),
+                          child: Align(
+                              alignment: Alignment.centerLeft,
+                              child: Text('Delete', style: TextStyle(color: Colors.white, fontSize: 20))
+                          ),
+                        ),
+                      ),
+                      onDismissed: (DismissDirection direction) {
+                        setState(() {
+                          socketService.socket.emit('delete-band', {'id': bands[index].id});
+                          bands.removeAt(index);
+                        });
+
+                      },
+                      child: Card(
+                        elevation: 10,
+                        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+                        child: ListTile(
+                          leading: CircleAvatar(
+                            child: Text(bands[index].name.substring(0,2), style: const TextStyle(color: Colors.amber)),
+                            backgroundColor: Colors.amber[100],
+                          ),
+                          title: Text(bands[index].name, style: const TextStyle(fontSize: 25),),
+                          trailing: Text('${bands[index].votes}', style: const TextStyle(fontSize: 20)),
+                          onTap: (){
+                            socketService.socket.emit('vote-band', {'id': bands[index].id});
+                            print('VOTED ${bands[index].id}');
+                          },
+                        ),
+                      ),
                     ),
-                    title: Text(bands[index].name, style: const TextStyle(fontSize: 25),),
-                    trailing: Text('${bands[index].votes}', style: const TextStyle(fontSize: 20)),
-                    onTap: (){
-                      socketService.socket.emit('vote-band', {'id': bands[index].id});
-                      print('VOTED ${bands[index].id}');
-                    },
-                  ),
-                ),
+                  );
+                },
               ),
-            );
-          },
-        ),
+          ),
+        ],
+      ),
       floatingActionButton: FloatingActionButton(
         backgroundColor: Colors.amber,
         child: const Icon(Icons.add,),
@@ -187,6 +204,31 @@ class _HomeScreenState extends State<HomeScreen> {
     }
     Navigator.pop(context);
   }
+
+  Widget _showGraph(){
+
+    Map<String, double> dataMap = {
+    };
+    bands.forEach((band) {
+      dataMap.putIfAbsent(band.name, () => band.votes.toDouble());
+    });
+
+
+
+
+
+    return dataMap.length == 0?Container(child: CircularProgressIndicator(color: Colors.amber,),): PieChart(
+      dataMap: dataMap,
+      chartType: ChartType.ring,
+      chartValuesOptions: ChartValuesOptions(
+        showChartValuesInPercentage: true,
+      ),
+      baseChartColor: Colors.grey[50]!.withOpacity(0.15),
+    );
+
+  }
+
+
 
 
 
