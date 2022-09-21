@@ -179,7 +179,8 @@ class _HomeScreenState extends State<HomeScreen> {
   _addBandToList(String name){
     if(name.length > 1){
 
-      this.bands.add(Band(id: DateTime.now().toString(), name: name, votes: 0));
+      final socketService = Provider.of<SocketService>(context, listen: false);
+      socketService.socket.emit('add-band', {'name': name});
       setState(() {
 
       });
