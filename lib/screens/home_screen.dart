@@ -89,8 +89,10 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
                 onDismissed: (DismissDirection direction) {
                   setState(() {
+                    socketService.socket.emit('delete-band', {'id': bands[index].id});
                     bands.removeAt(index);
                   });
+
                 },
                 child: Card(
                   elevation: 10,
