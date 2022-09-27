@@ -6,12 +6,12 @@ This is a flutter project, the app shows a full understanding of the Provider St
 1. Download and open all of the project file using a flutter compatible IDE.
 2. I recomend IntelliJ IDEA
 3. Run the app using the iOS emulator or android emulator.
-RECOMMENDED: TAKE A LOOK AT THE SERVER HERE - https://github.com/juanfranciscocis/Band_Names_Server/blob/master/README.md
+RECOMMENDED: TAKE A LOOK AT THE SERVER HERE - https://github.com/juanfranciscocis/Realtime_Voting_App_Server/blob/master/README.md
 
 ## I'm looking your CV (Curriculum Vitae), where can I find useful info about this project?
 You can take a look at some images here:
 
-***PLEASE TAKE A LOOK ALSO AT THE SERVER DEPLOYMENT HERE:*** https://github.com/juanfranciscocis/Band_Names_Server/blob/master/README.md
+***PLEASE TAKE A LOOK ALSO AT THE SERVER DEPLOYMENT HERE:*** https://github.com/juanfranciscocis/Realtime_Voting_App_Server/blob/master/README.md
 
 #### iOS app Dark Theme
 
