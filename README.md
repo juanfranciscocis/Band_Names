@@ -16,17 +16,17 @@ You can take a look at some images here:
 #### iOS app Dark Theme
 
 <p float="left">
-  <img src="https://github.com/juanfranciscocis/Band_Names/blob/75953cf7de4616645ef11bdbb8ca80dbfbc3e706/README%20FILES/iOS/1.png"width="300"/>
-  <img src="https://github.com/juanfranciscocis/Band_Names/blob/75953cf7de4616645ef11bdbb8ca80dbfbc3e706/README%20FILES/iOS/2.png"width="300"/>
-  <img src="https://github.com/juanfranciscocis/Band_Names/blob/75953cf7de4616645ef11bdbb8ca80dbfbc3e706/README%20FILES/iOS/3.png"width="300"/>
-  <img src="https://github.com/juanfranciscocis/Band_Names/blob/75953cf7de4616645ef11bdbb8ca80dbfbc3e706/README%20FILES/iOS/4.png"width="300"/>
+  <img src="https://github.com/juanfranciscocis/Realtime_Voting_App/blob/eb85da476bfe91c8412b2a366b045549cce0ca77/README%20FILES/iOS/1.png"width="300"/>
+  <img src="https://github.com/juanfranciscocis/Realtime_Voting_App/blob/eb85da476bfe91c8412b2a366b045549cce0ca77/README%20FILES/iOS/2.png"width="300"/>
+  <img src="https://github.com/juanfranciscocis/Realtime_Voting_App/blob/eb85da476bfe91c8412b2a366b045549cce0ca77/README%20FILES/iOS/3.png"width="300"/>
+  <img src="https://github.com/juanfranciscocis/Realtime_Voting_App/blob/eb85da476bfe91c8412b2a366b045549cce0ca77/README%20FILES/iOS/4.png"width="300"/>
 </p>
 
 #### Server running at [https://flutter-bands-socket-server-jc.herokuapp.com](https://flutter-voting-socket-server.herokuapp.com)
 <p float="left">
-  <img src="https://github.com/juanfranciscocis/Band_Names/blob/75953cf7de4616645ef11bdbb8ca80dbfbc3e706/README%20FILES/Server/1.png"width="600"/>
-  <img src="https://github.com/juanfranciscocis/Band_Names/blob/75953cf7de4616645ef11bdbb8ca80dbfbc3e706/README%20FILES/Server/2.png"width="600"/>
-  <img src="https://github.com/juanfranciscocis/Band_Names/blob/75953cf7de4616645ef11bdbb8ca80dbfbc3e706/README%20FILES/Server/3.png"width="600"/>
+  <img src="https://github.com/juanfranciscocis/Realtime_Voting_App/blob/eb85da476bfe91c8412b2a366b045549cce0ca77/README%20FILES/Server/1.png"width="600"/>
+  <img src="https://github.com/juanfranciscocis/Realtime_Voting_App/blob/eb85da476bfe91c8412b2a366b045549cce0ca77/README%20FILES/Server/2.png"width="600"/>
+  <img src="https://github.com/juanfranciscocis/Realtime_Voting_App/blob/eb85da476bfe91c8412b2a366b045549cce0ca77/README%20FILES/Server/3.png"width="600"/>
   
 </p>
 
