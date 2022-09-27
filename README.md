@@ -16,21 +16,17 @@ You can take a look at some images here:
 #### iOS app Dark Theme
 
 <p float="left">
-  <img src="https://github.com/juanfranciscocis/News_App/blob/8ae7147acebc621f0ada072b7b10af222b3fa388/README%20FILES/1.png"width="300"/>
-  <img src="https://github.com/juanfranciscocis/News_App/blob/8ae7147acebc621f0ada072b7b10af222b3fa388/README%20FILES/2.png"width="300"/>
-  <img src="https://github.com/juanfranciscocis/News_App/blob/8ae7147acebc621f0ada072b7b10af222b3fa388/README%20FILES/3.png"width="300"/>
-  <img src="https://github.com/juanfranciscocis/News_App/blob/8ae7147acebc621f0ada072b7b10af222b3fa388/README%20FILES/4.png"width="300"/>
-  <img src="https://github.com/juanfranciscocis/News_App/blob/8ae7147acebc621f0ada072b7b10af222b3fa388/README%20FILES/5.png"width="300"/>
-  
+  <img src="https://github.com/juanfranciscocis/Band_Names/blob/75953cf7de4616645ef11bdbb8ca80dbfbc3e706/README%20FILES/iOS/1.png"width="300"/>
+  <img src="https://github.com/juanfranciscocis/Band_Names/blob/75953cf7de4616645ef11bdbb8ca80dbfbc3e706/README%20FILES/iOS/2.png"width="300"/>
+  <img src="https://github.com/juanfranciscocis/Band_Names/blob/75953cf7de4616645ef11bdbb8ca80dbfbc3e706/README%20FILES/iOS/3.png"width="300"/>
+  <img src="https://github.com/juanfranciscocis/Band_Names/blob/75953cf7de4616645ef11bdbb8ca80dbfbc3e706/README%20FILES/iOS/4.png"width="300"/>
 </p>
 
 #### Server running at https://flutter-bands-socket-server-jc.herokuapp.com
 <p float="left">
-  <img src="https://github.com/juanfranciscocis/News_App/blob/8ae7147acebc621f0ada072b7b10af222b3fa388/README%20FILES/1.png"width="300"/>
-  <img src="https://github.com/juanfranciscocis/News_App/blob/8ae7147acebc621f0ada072b7b10af222b3fa388/README%20FILES/2.png"width="300"/>
-  <img src="https://github.com/juanfranciscocis/News_App/blob/8ae7147acebc621f0ada072b7b10af222b3fa388/README%20FILES/3.png"width="300"/>
-  <img src="https://github.com/juanfranciscocis/News_App/blob/8ae7147acebc621f0ada072b7b10af222b3fa388/README%20FILES/4.png"width="300"/>
-  <img src="https://github.com/juanfranciscocis/News_App/blob/8ae7147acebc621f0ada072b7b10af222b3fa388/README%20FILES/5.png"width="300"/>
+  <img src="https://github.com/juanfranciscocis/Band_Names/blob/75953cf7de4616645ef11bdbb8ca80dbfbc3e706/README%20FILES/Server/1.png"width="600"/>
+  <img src="https://github.com/juanfranciscocis/Band_Names/blob/75953cf7de4616645ef11bdbb8ca80dbfbc3e706/README%20FILES/Server/2.png"width="600"/>
+  <img src="https://github.com/juanfranciscocis/Band_Names/blob/75953cf7de4616645ef11bdbb8ca80dbfbc3e706/README%20FILES/Server/3.png"width="600"/>
   
 </p>
 
