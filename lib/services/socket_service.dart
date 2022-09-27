@@ -30,7 +30,7 @@ class SocketService with ChangeNotifier{
 
   void _initConfig(){
 
-     this._socket = IO.io('http://localhost:3000/',{
+     this._socket = IO.io('https://flutter-bands-socket-server-jc.herokuapp.com',{
       'transports': ['websocket'],
       'autoConnect': true,
     });
